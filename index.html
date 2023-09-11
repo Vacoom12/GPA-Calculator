@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPA Calculator</title>
+    <link rel="stylesheet" href="bootstrap-5.3.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container p-5 my-5 bg-primary text-white rounded">
+        <h1 class="mb-4 text-center">GPA Calculator</h1>
+        <p><b>GPA</b> คืออะไร? GPA (Grade Point Average) คือผลการการเรียนเฉลี่ย โดยสามารถคำนวณได้จากการนำเกรดแต่ละวิชามาคูณกับหน่วยกิตของวิชานั้นๆ แล้วนำมาบวกกันทั้งหมดและหารด้วยจำนวนหน่วยกิตทั้งหมด</p>
+        <div id="list" class="container text-start m-2">
+            <div id="row1" class="row d-flex flex-nowrap my-3">
+                <div class="col d-flex align-items-center justify-content-center">
+                    <label for="subject">1.</label>
+                    <input class="form-control mx-5" type="text" placeholder="วิชา (ไม่จำเป็น)">
+                    <input id="grade1" class="form-control mx-5" type="text" placeholder="เกรด">
+                    <input id="credit1" class="form-control mx-5" type="text" placeholder="หน่วยกิต">
+                </div>
+            </div>
+        </div>
+        <div class="text-center m-2">
+            <button type="button" class="btn btn-success" onclick="addList()">เพิ่ม</button>
+            <button type="button" class="btn btn-danger" onclick="removeList('row' + rowCounter)">ลบ</button>
+            <button type="button" class="btn btn-warning" onclick="location.reload()">รีเซ็ต</button>
+        </div>
+        <div class="text-center m-2"> 
+            <button type="button" class="btn btn-light" onclick="cal()">คำนวณ</button>
+        </div>
+        <p id="result" class="text-center bg-light rounded fs-5 text-black"></p>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
