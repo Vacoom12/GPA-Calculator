@@ -20,7 +20,7 @@ function addList() {
 
 function removeList(rowNumber) {
     const rowRemover = document.getElementById(rowNumber);
-    rowRemover.remove(); // This will remove the row from the DOM
+    rowRemover.remove(); 
     rowCounter--;
 }
 
